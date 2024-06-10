@@ -48,4 +48,24 @@ public class BinarySearch {
 
         return -1;
     }
+
+    // 二分查找第三版：平衡版
+    public static int binarySearchBalance(int[] A, int target){
+        int left = 0, right = A.length;
+        while(1 < right-left){
+            int mid = (left+right) >>> 1;
+            if(A[mid] <= target){    // 目标值在右侧
+                left = mid;
+            }else{
+                right = mid;
+            }
+        }
+        // right = left+1
+        if(A[left] == target){
+            return left;
+        }else{
+            return -1;
+        }
+    }
+    // java Arrays里面有二分查找的源码，返回值为负的插入点-1
 }

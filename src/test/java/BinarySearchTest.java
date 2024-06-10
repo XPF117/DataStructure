@@ -1,7 +1,6 @@
 import org.junit.Test;
 
-import static com.atbjtu.InitialKnowledgeAlgorithm.BinarySearch.binarySearchBasic;
-import static com.atbjtu.InitialKnowledgeAlgorithm.BinarySearch.binarySearchSecond;
+import static com.atbjtu.InitialKnowledgeAlgorithm.BinarySearch.*;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -47,5 +46,26 @@ public class BinarySearchTest {
         assertEquals(binarySearchSecond(A, 20), -1);
         assertEquals(binarySearchSecond(A, 26), -1);
         assertEquals(binarySearchSecond(A, 53), -1);
+    }
+
+    @Test
+    public void testBinarySearchBalance() {
+
+        int[] A = {3,9,18,21,25,30,35,49,52,66};
+        assertEquals(binarySearchBalance(A, 3), 0);
+        assertEquals(binarySearchBalance(A, 9), 1);
+        assertEquals(binarySearchBalance(A, 18), 2);
+        assertEquals(binarySearchBalance(A, 21), 3);
+        assertEquals(binarySearchBalance(A, 25), 4);
+        assertEquals(binarySearchBalance(A, 30), 5);
+        assertEquals(binarySearchBalance(A, 35), 6);
+        assertEquals(binarySearchBalance(A, 49), 7);
+        assertEquals(binarySearchBalance(A, 52), 8);
+        assertEquals(binarySearchBalance(A, 66), 9);
+
+        assertEquals(binarySearchBalance(A, 1), -1);
+        assertEquals(binarySearchBalance(A, 20), -1);
+        assertEquals(binarySearchBalance(A, 26), -1);
+        assertEquals(binarySearchBalance(A, 53), -1);
     }
 }

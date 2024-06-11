@@ -68,4 +68,22 @@ public class BinarySearch {
         }
     }
     // java Arrays里面有二分查找的源码，返回值为负的插入点-1
+    // 二分查找第四版：具有重复值返回最靠左的索引
+    public static int binarySearchRepeat(int[] A, int target) {
+        int left = 0, right = A.length - 1;
+        int candidate = -1;
+        while(left <= right){
+            int mid = (left+right) >>> 1;
+            if(A[mid] > target){
+                right = mid -1;
+            }else if(A[mid] < target){
+                left = mid + 1;
+            }else{
+                candidate = mid;
+                right = mid -1;
+            }
+        }
+        return candidate;
+    }
+
 }

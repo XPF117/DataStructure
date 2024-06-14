@@ -146,6 +146,21 @@ public class SinglyLinkedList implements Iterable<Integer>{  // 外部类
         nodePre.next = nodePre.next.next;  // 跳过当前节点
     }
 
+    // 递归处理链表
+    private void recursion(Node curr){
+        if(curr == null){
+            return;
+        }
+
+        System.out.println(curr.value);
+        recursion(curr.next);
+    }
+
+    // 打印链表
+    public void loop3(){
+        recursion(head);
+    }
+
 }
 
 

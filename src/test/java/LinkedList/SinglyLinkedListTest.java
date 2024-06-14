@@ -8,15 +8,11 @@ import org.junit.Test;
  * @description:
  * @date: 2024/6/13 21:19
  */
-public class SinglyListTest {
+public class SinglyLinkedListTest {
 
     @Test
     public void testRemove() {
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.addFirst(1);
-        list.addFirst(2);
-        list.addFirst(3);
-        list.addFirst(4);
+        SinglyLinkedList list = getList();
         list.remove(4);
         for(Integer value : list){
             System.out.print(value + " ");
@@ -26,11 +22,7 @@ public class SinglyListTest {
 
     @Test
     public void testAdd() {
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.addFirst(1);
-        list.addFirst(2);
-        list.addFirst(3);
-        list.addFirst(4);
+        SinglyLinkedList list = getList();
 
         list.add(4, 5);
         for(Integer value : list){
@@ -42,11 +34,7 @@ public class SinglyListTest {
 
     @Test
     public void test() {
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.addFirst(1);
-        list.addFirst(2);
-        list.addFirst(3);
-        list.addFirst(4);
+        SinglyLinkedList list = getList();
 
         list.loop1((value)-> System.out.println(value));
 
@@ -55,14 +43,25 @@ public class SinglyListTest {
 
     @Test
     public void testIterator() {
+        SinglyLinkedList list = getList();
+
+        for (int value : list) {
+            System.out.println(value);
+        }
+    }
+
+    private static SinglyLinkedList getList() {
         SinglyLinkedList list = new SinglyLinkedList();
         list.addFirst(1);
         list.addFirst(2);
         list.addFirst(3);
         list.addFirst(4);
+        return list;
+    }
 
-        for (int value : list) {
-            System.out.println(value);
-        }
+    @Test
+    public void testLoop3() {
+        SinglyLinkedList list = getList();
+        list.loop3();
     }
 }

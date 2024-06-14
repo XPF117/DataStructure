@@ -1,3 +1,5 @@
+package BianrySearch;
+
 import org.junit.Test;
 
 import static com.atbjtu.InitialKnowledgeAlgorithm.BinarySearch.*;

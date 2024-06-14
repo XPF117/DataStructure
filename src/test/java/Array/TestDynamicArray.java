@@ -1,3 +1,5 @@
+package Array;
+
 import com.atbjtu.Arrays.DynamicArray;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;

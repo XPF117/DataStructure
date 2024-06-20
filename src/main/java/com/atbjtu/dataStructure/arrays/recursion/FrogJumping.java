@@ -1,4 +1,4 @@
-package com.atbjtu.recursion;
+package com.atbjtu.dataStructure.arrays.recursion;
 
 import java.util.Arrays;
 

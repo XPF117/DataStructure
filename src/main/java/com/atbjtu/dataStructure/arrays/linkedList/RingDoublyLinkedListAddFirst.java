@@ -1,4 +1,4 @@
-package com.atbjtu.linkedList;
+package com.atbjtu.dataStructure.arrays.linkedList;
 
 import java.util.Iterator;
 

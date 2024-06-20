@@ -1,4 +1,4 @@
-package com.atbjtu.recurtionMulti;
+package com.atbjtu.dataStructure.arrays.recurtionMulti;
 
 /**
  * @author: PengfeiXi

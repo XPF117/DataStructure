@@ -1,4 +1,4 @@
-package com.atbjtu.algorithm;
+package com.atbjtu.algorithm.linkedList;
 
 /**
  * @author: PengfeiXi

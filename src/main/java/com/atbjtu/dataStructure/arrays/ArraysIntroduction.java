@@ -1,4 +1,4 @@
-package com.atbjtu.arrays;
+package com.atbjtu.dataStructure.arrays;
 
 /**
  * @author: PengfeiXi

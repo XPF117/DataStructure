@@ -1,4 +1,4 @@
-package com.atbjtu.initialKnowledgeAlgorithm;
+package com.atbjtu.dataStructure.arrays.initialKnowledgeAlgorithm;
 
 /**
  * @author: PengfeiXi

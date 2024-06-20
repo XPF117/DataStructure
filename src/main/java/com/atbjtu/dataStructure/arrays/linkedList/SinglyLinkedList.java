@@ -1,20 +1,21 @@
-package com.atbjtu.linkedList;
+package com.atbjtu.dataStructure.arrays.linkedList;
 
 import java.util.Iterator;
 import java.util.function.Consumer;
 
 /**
  * @author: PengfeiXi
- * @description:
- * @date: 2024/6/13 22:52
+ * @description: 单向链表
+ * @date: 2024/6/13 21:09
  */
-public class SinglyLinkedListSentinel implements Iterable<Integer> {
-    private Node head = new Node(666, null);  // 哨兵节点
+//
+public class SinglyLinkedList implements Iterable<Integer>{  // 外部类
+    private Node head;  // 头指针
 
     @Override
     public Iterator<Integer> iterator() {
         return new Iterator<Integer>() {
-            Node p = head.next;
+            Node p = head;
             @Override
             public boolean hasNext() {
                 return p!=null;
@@ -42,13 +43,13 @@ public class SinglyLinkedListSentinel implements Iterable<Integer> {
     // 新增节点，放到连标头部
     public void addFirst(int value){  // 链表头也存值
         // 链表为空
-        // head = new Node(value,null);
+           // head = new Node(value,null);
         // 链表非空
-        add(0,value);
+        head = new Node(value,head);
     }
 
     public void loop1(Consumer<Integer> consumer){
-        Node p = head.next;
+        Node p = head;
         while(p!= null) {
             consumer.accept(p.value);
             p = p.next;
@@ -56,12 +57,15 @@ public class SinglyLinkedListSentinel implements Iterable<Integer> {
     }
 
     public void loop2(Consumer<Integer> consumer){
-        for(Node p = head.next; p!= null; p = p.next){
+        for(Node p = head; p!= null; p = p.next){
             consumer.accept(p.value);
         }
     }
 
     private Node findLast(){
+        if(head == null){
+            return null;
+        }
         Node node = head;
         while(node.next!= null){
             node = node.next;
@@ -71,13 +75,16 @@ public class SinglyLinkedListSentinel implements Iterable<Integer> {
 
     // 在尾部添加节点
     public void addLast(int value){
-        Node last = findLast();// 找到尾节点，如果链表为空，last为哨兵节点
-        last.next = new Node(value, null);
-
+        Node last = findLast();
+        if(last == null){
+            addFirst(value);
+        }else {
+            last.next = new Node(value, null);
+        }
     }
     // 根据索引找节点，内部用
     private Node findNode(int index){
-        int i = -1;
+        int i = 0;
         for(Node p = head; p!= null; p = p.next){
             if(i == index){
                 return p;
@@ -104,7 +111,10 @@ public class SinglyLinkedListSentinel implements Iterable<Integer> {
     // 根据索引插入新节点
 
     public void add(int index, int value) {
-
+        if(index == 0){
+            addFirst(value);
+            return;
+        }
         Node node = findNode(index-1);  // 先找到上一个节点
         if(node == null){
             throw getIllegalArgumentException(index);
@@ -114,11 +124,18 @@ public class SinglyLinkedListSentinel implements Iterable<Integer> {
 
     // 删除第一个节点
     public void removeFirst(){
-        remove(0);
+        if(head == null){
+            throw getIllegalArgumentException(0);
+        }
+        head = head.next;  // java 垃圾回收的时候会自动回收没有引用的节点
     }
 
     // 根据索引删除节点
     public void remove(int index){
+        if(index == 0){
+            removeFirst();
+            return;
+        }
         Node nodePre = findNode(index-1);
         if(nodePre == null){
             throw getIllegalArgumentException(index);
@@ -128,4 +145,22 @@ public class SinglyLinkedListSentinel implements Iterable<Integer> {
         }
         nodePre.next = nodePre.next.next;  // 跳过当前节点
     }
+
+    // 递归处理链表
+    private void recursion(Node curr){
+        if(curr == null){
+            return;
+        }
+
+        System.out.println(curr.value);
+        recursion(curr.next);
+    }
+
+    // 打印链表
+    public void loop3(){
+        recursion(head);
+    }
+
 }
+
+

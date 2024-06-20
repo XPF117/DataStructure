@@ -1,6 +1,6 @@
 package LinkedList;
 
-import com.atbjtu.LinkedList.SinglyLinkedList;
+import com.atbjtu.linkedList.SinglyLinkedList;
 import org.junit.Test;
 
 /**

@@ -2,7 +2,7 @@ package BianrySearch;
 
 import org.junit.Test;
 
-import static com.atbjtu.InitialKnowledgeAlgorithm.BinarySearch.*;
+import static com.atbjtu.initialKnowledgeAlgorithm.BinarySearch.*;
 import static org.junit.Assert.assertEquals;
 
 /**

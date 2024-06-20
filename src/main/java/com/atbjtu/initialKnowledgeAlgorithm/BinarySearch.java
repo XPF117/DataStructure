@@ -1,4 +1,4 @@
-package com.atbjtu.InitialKnowledgeAlgorithm;
+package com.atbjtu.initialKnowledgeAlgorithm;
 
 /**
  * @author: PengfeiXi

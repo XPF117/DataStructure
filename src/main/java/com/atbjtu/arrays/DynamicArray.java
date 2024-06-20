@@ -1,4 +1,4 @@
-package com.atbjtu.Arrays;
+package com.atbjtu.arrays;
 
 import java.util.Iterator;
 import java.util.function.Consumer;

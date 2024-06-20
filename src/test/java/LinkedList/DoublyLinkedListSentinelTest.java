@@ -1,6 +1,6 @@
 package LinkedList;
 
-import com.atbjtu.LinkedList.DoublyLinkedListSentinel;
+import com.atbjtu.linkedList.DoublyLinkedListSentinel;
 import org.junit.Test;
 
 import java.util.List;

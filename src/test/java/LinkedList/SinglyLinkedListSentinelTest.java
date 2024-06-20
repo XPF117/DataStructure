@@ -1,7 +1,6 @@
 package LinkedList;
 
-import com.atbjtu.LinkedList.SinglyLinkedList;
-import com.atbjtu.LinkedList.SinglyLinkedListSentinel;
+import com.atbjtu.linkedList.SinglyLinkedListSentinel;
 import org.junit.Test;
 
 import java.util.List;

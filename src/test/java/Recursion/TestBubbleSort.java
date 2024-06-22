@@ -2,7 +2,7 @@ package Recursion;
 
 import org.junit.jupiter.api.Test;
 
-import static com.atbjtu.recursion.BubbleSort.sort;
+import static com.atbjtu.dataStructure.arrays.recursion.BubbleSort.sort;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /**

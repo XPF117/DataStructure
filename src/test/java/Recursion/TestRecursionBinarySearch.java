@@ -2,7 +2,7 @@ package Recursion;
 
 import org.junit.jupiter.api.Test;
 
-import static com.atbjtu.recursion.RecursionBinarySearch.search;
+import static com.atbjtu.dataStructure.arrays.recursion.RecursionBinarySearch.search;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**

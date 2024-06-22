@@ -1,6 +1,6 @@
 package LinkedList;
 
-import com.atbjtu.linkedList.RingDoublyLinkedListAddFirst;
+import com.atbjtu.dataStructure.arrays.linkedList.RingDoublyLinkedListAddFirst;
 import org.junit.Test;
 
 import java.util.List;
